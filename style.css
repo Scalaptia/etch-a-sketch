@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(11, 11, 22);
+    color: #ffffff;
+    margin: 0;
+}
+
+#gengrid {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridsquare {
+    width: 25px;
+    height: 25px;
+    outline: 1px solid;
+}
