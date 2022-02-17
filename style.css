@@ -20,13 +20,12 @@ body {
 }
 
 #grid {
-    max-width: 400px;
-    max-height: 400px;
+    width: 40rem;
+    height: 40rem;
     display: flex;
     flex-wrap: wrap ;
     align-items: center;
     justify-content: center;
-    overflow:inherit;
 }
 
 .row {
@@ -37,8 +36,6 @@ body {
 }
 
 .gridsquare {
-    width: 25px;
-    height: 25px;
     outline: 1px solid;
     background: black;
 }
