@@ -2,14 +2,57 @@ body {
     background-color: rgb(11, 11, 22);
     color: #ffffff;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#gengrid {
+/* Header */
+header {
+    display: flex;
+    background: rgb(0, 0, 12);
+    color: rgb(240, 240, 240);
+    height: 6em;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 900;
+    padding: 0 16px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Top Section */
+#top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Reset Grid Button */
+.resetbtn {
     margin: 10px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.5em;
+    outline: 2px solid white;
+    border-radius: 2px;
+    background-color: rgb(0, 0, 12);
+    color: white;
+}
+
+/* Size Control */
+#sizecontrol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5em;
+    outline: 2px solid white;
+    border-radius: 2px;
+    background-color: rgb(0, 0, 12);
 }
 
 /* Grid */
@@ -22,25 +65,36 @@ body {
 #grid {
     width: 40rem;
     height: 40rem;
-    display: flex;
-    flex-wrap: wrap ;
-    align-items: center;
-    justify-content: center;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
 .gridsquare {
     outline: 1px solid;
-    background: black;
+    background-color: rgb(0, 0, 12);
 }
 
 /* Hover Effects */
 .gridhover {
     background-color: white;
+}
+
+/* Footer */
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #1F2937;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer h1{
+    font-size: 14px;
+    font-weight: 600;
 }

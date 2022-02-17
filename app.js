@@ -1,8 +1,8 @@
 const grid = document.getElementById('grid');
-let length = 25;
-let cellSize = grid.clientWidth / length;
-
-genDivs(length);
+let slider = document.querySelector('input');  // Row Length
+let length = parseInt(slider.value);
+let lengthValue = document.querySelector('.grid-size');
+let cellSize = grid.clientWidth / length;  // Make cell size relative to row length
 
 // Create grid of divs
 function genDivs(length){ 
@@ -20,21 +20,34 @@ function genDivs(length){
     } 
 }
 
-
 // Delete grid divs and create new div
-function clearGrid (length) {
+function clearGrid () {
     while (grid.firstChild) {
         grid.removeChild(grid.lastChild);
       }
       genDivs(length);
     }
 
-    
 // Hover effect on gridsquare
 grid.addEventListener('mouseover', function (e) {
     if (e.target.matches('.gridsquare')) {
       e.target.classList.add('gridhover');
     }
   });
+
+
+// Slider
+slider.addEventListener('input', function (e) {
+    cellSize = e.target.value;                              //
+    length = parseInt(slider.value);                        //  Auto-Update length values
+    cellSize = grid.clientWidth / parseInt(slider.value);   // 
+    lengthValue.textContent = `${length}x${length}`;
+    clearGrid();
+});
+
+// Load on page start
+genDivs(length);
+
+
 
 
