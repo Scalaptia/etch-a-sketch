@@ -13,6 +13,22 @@ body {
 }
 
 /* Grid */
+.gridContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#grid {
+    max-width: 400px;
+    max-height: 400px;
+    display: flex;
+    flex-wrap: wrap ;
+    align-items: center;
+    justify-content: center;
+    overflow:inherit;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -24,4 +40,10 @@ body {
     width: 25px;
     height: 25px;
     outline: 1px solid;
+    background: black;
+}
+
+/* Hover Effects */
+.gridhover {
+    background-color: white;
 }
