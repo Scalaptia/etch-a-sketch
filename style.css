@@ -5,6 +5,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+button {
+    border-style: none;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
 /* Header */
 header {
     display: flex;
@@ -25,8 +37,24 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
+}
+
+.topcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* Slider */
+#sizecontrol {
+    padding: 0.5em;
+    outline: 2px solid white;
+    border-radius: 2px;
+    background-color: rgb(0, 0, 12);
+    font-size: smaller;
 }
 
 /* Reset Grid Button */
@@ -44,15 +72,30 @@ header {
 }
 
 /* Size Control */
-#sizecontrol {
+#sizecontrol,
+#colorpicker {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+/* Color Picker */
+#colorpicker{
+    gap: 10px;
+}
+
+#colorpicker button {
+    margin: 3px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.5em;
     outline: 2px solid white;
     border-radius: 2px;
     background-color: rgb(0, 0, 12);
+    color: white;
 }
 
 /* Grid */
@@ -63,8 +106,8 @@ header {
 }
 
 #grid {
-    width: 40rem;
-    height: 40rem;
+    width: 30rem;
+    height: 30rem;
 }
 
 .row {

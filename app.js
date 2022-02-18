@@ -4,6 +4,11 @@ let length = parseInt(slider.value);
 let lengthValue = document.querySelector('.grid-size');
 let cellSize = grid.clientWidth / length;  // Make cell size relative to row length
 
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
+
 // Create grid of divs
 function genDivs(length){ 
     for(i = 0; i < length; i++){ 
