@@ -30,7 +30,7 @@ function clearGrid () {
     }
 
 // Mode picker //
-let mode;
+let mode = 'white';
 const white = document.querySelector('.white');
 const rainbow = document.querySelector('.rainbow');
 
