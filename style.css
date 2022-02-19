@@ -5,8 +5,29 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Button Effects */
 button {
+    margin: 3px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    outline: 2px solid white;
+    border-radius: 2px;
+    background-color: rgb(0, 0, 12);
+    color: white;
     border-style: none;
+}
+
+button:hover {
+    background-color: #1F2937;
+}
+
+button:active {
+    background-color: #232e3d;
+    box-shadow: 0 5px #181f29;
+    transform: translateY(1px);
 }
 
 #content {
@@ -46,6 +67,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    gap: 20px;
 }
 
 /* Slider */
@@ -55,20 +77,6 @@ header {
     border-radius: 2px;
     background-color: rgb(0, 0, 12);
     font-size: smaller;
-}
-
-/* Reset Grid Button */
-.resetbtn {
-    margin: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5em;
-    outline: 2px solid white;
-    border-radius: 2px;
-    background-color: rgb(0, 0, 12);
-    color: white;
 }
 
 /* Size Control */
@@ -83,19 +91,6 @@ header {
 /* Color Picker */
 #colorpicker{
     gap: 10px;
-}
-
-#colorpicker button {
-    margin: 3px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5em;
-    outline: 2px solid white;
-    border-radius: 2px;
-    background-color: rgb(0, 0, 12);
-    color: white;
 }
 
 /* Grid */
@@ -118,11 +113,6 @@ header {
 .gridsquare {
     outline: 1px solid;
     background-color: rgb(0, 0, 12);
-}
-
-/* Hover Effects */
-.gridhover {
-    background-color: white;
 }
 
 /* Footer */
