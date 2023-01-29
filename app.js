@@ -33,6 +33,7 @@ function clearGrid () {
 let mode = 'white';
 const white = document.querySelector('.white');
 const rainbow = document.querySelector('.rainbow');
+const customColor = document.querySelector('.customcolor')
 
 // Update 'mode' on button click event
 white.addEventListener('click', (event) => {
@@ -40,6 +41,9 @@ white.addEventListener('click', (event) => {
 })
 rainbow.addEventListener('click', (event) => {
   mode = 'rainbow';
+})
+customColor.addEventListener('click', (event) => {
+  mode = 'customcolor'
 })
 
 // Switch mode functionality
@@ -60,7 +64,13 @@ const randomB = Math.floor(Math.random() * 256)
         e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
       }
     });
-  } 
+  } else if (mode === 'customcolor'){
+    grid.addEventListener('mouseover', function (e) {
+      if (e.target.matches('.gridsquare')) {
+        e.target.style.backgroundColor = `${customColor.value}`;
+      }
+    });
+  }
 }
 grid.addEventListener('mouseover', changeColor);
 
